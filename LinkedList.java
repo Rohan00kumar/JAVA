@@ -1,51 +1,89 @@
-public class LinkedList {
-    Node head;
-    public class Node {
-        int data;
-        Node next;
+// public class LinkedList {
+//     Node head;
+//     public class Node {
+//         int data;
+//         Node next;
 
-        Node(int data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
+//         Node(int data) {
+//             this.data = data;
+//             this.next = null;
+//         }
+//     }
 
-    // add node first
-    public void addFirst(int data) {
-        Node newNode = new Node(data);
+//     // add node first
+//     public void addFirst(int data) {
+//         Node newNode = new Node(data);
+//         if (head == null) {
+//             head = newNode;
+//             return;
+//         }
+//         newNode.next = head;
+//         head = newNode;
+//     }
 
-        if (head == null) {
-            head = newNode;
-            return;
-        }
-        newNode.next = head;
-        head = newNode;
-    }
+//     // add node last
+//     public void addLast(int data) {
+//         Node newNode = new Node(data);
+//         if (head == null) {
+//             head = newNode;
+//             return;
+//         }
+//         Node currNode = head;
+//         while (currNode.next != null) {
+//             currNode = currNode.next;
+//         }
+//         currNode.next= newNode;
+//     }
+//     // print the list 
+//     public void printList() {
+//         if (head == null) {
+//             System.out.println("list is empty");
+//         }
+//         Node currNode = head;
+//         while (currNode != null) {
+//             System.out.print(currNode.data + " " + "->" + " ");
+//             currNode = currNode.next;
+//         }
+//         System.out.println("null");
+//     }
 
-    // add node last
+//     // delete first node
+//     public void delFirst() {
+//         if (head == null) {
+//             System.out.println("list is empty");
+//         }
+//         head = head.next;
+//     }
+    
+//     public void delLast() {
+//         if (head == null) {
+//             System.out.println("list is empty");
+//         }
 
-    public void addLast(int data) {
-        Node currNode = head;
-        while (currNode.next != null) {
-            currNode = currNode.next;
-        }
-        currNode.next = null;
-        head.next = currNode;
-    }
-    // print the list 
-    public void printList() {
-        Node currNode = head;
-        while (currNode != null) {
-            System.out.print(currNode.data);
-            currNode = currNode.next;
-        }
-        System.out.println("null");
-    }
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+//         if (head.next == null) {
+//             head = null;
+//             return;
+//         }
 
-        list.addFirst(20);
-        list.addFirst(30);
-        list.printList();
-    }
-}
+//         Node secLast = head;
+//         Node lastNode = head.next;
+//         while (lastNode.next != null) {
+//             lastNode = lastNode.next;
+//             secLast = secLast.next;
+//         }
+//         secLast.next = null;
+//     }
+//     public static void main(String[] args) {
+//         LinkedList list = new LinkedList();
+
+//         list.addFirst(20);
+//         list.addFirst(30);
+//         list.addFirst(40);
+//         list.addLast(50);
+//         list.printList();
+
+//         // list.delFirst();
+//         list.delLast();
+//         list.printList();
+//     }
+// }
